@@ -1,0 +1,14 @@
+
+#Calculate the day someone was born
+import datetime
+Age = int(input("Age?"))
+MOB = int(input("M.O.B?"))
+DOB = int(input("D.O.B?"))
+DateNow = datetime.datetime.now()
+DaysPerYear = 365
+DaysLived = Age*DaysPerYear
+RDOBTD = datetime.timedelta(days = DaysLived) 
+RDOB = DateNow-RDOBTD
+YOB = int(RDOB.strftime("%Y"))
+ADOB = datetime.date(YOB,MOB,DOB)
+print("You were bonr on",ADOB.strftime("%Y"))
