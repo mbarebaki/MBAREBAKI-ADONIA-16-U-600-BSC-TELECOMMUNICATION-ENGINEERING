@@ -1,14 +1,17 @@
-
 #Calculate the day someone was born
 import datetime
-Age = int(input("Age?"))
-MOB = int(input("M.O.B?"))
-DOB = int(input("D.O.B?"))
+import calendar
+Age = int(input("Age?")) #This inputs my current age
+MOB = int(input("M.O.B?"))#This inputs the month of birth
+DOB = int(input("D.O.B?")) #This inputs the date of birth
 DateNow = datetime.datetime.now()
 DaysPerYear = 365
-DaysLived = Age*DaysPerYear
-RDOBTD = datetime.timedelta(days = DaysLived) 
+DaysLived = Age*DaysPerYear  
+RDOBTD = datetime.timedelta(days = DaysLived)#calcualtes the date of birth
+#This inputs the real date of birth
 RDOB = DateNow-RDOBTD
+#YOB means year of birth
 YOB = int(RDOB.strftime("%Y"))
+#prints the Actual Date Of Birth
 ADOB = datetime.date(YOB,MOB,DOB)
-print("You were bonr on",ADOB.strftime("%Y"))
+print("You were born on",ADOB.strftime( "%d" "%A"  "%Y"))
